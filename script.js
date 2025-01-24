@@ -1,6 +1,6 @@
 import { Octokit } from "octokit";
 
-console.log("test3")
+console.log("test4")
 
 const text = document.getElementById("text");
 const btn = document.getElementById("new-quote");
