@@ -1,6 +1,5 @@
-import { Octokit } from "octokit";
 
-console.log("test4")
+console.log("test55")
 
 const text = document.getElementById("text");
 const btn = document.getElementById("new-quote");
@@ -18,12 +17,13 @@ const options = {
 console.log("test")
 
 const getQuote = async () => {
-    text.textContent="Clicked!"
-    console.log("clicked")
-    const res = await fetch (quotesUrl,options);
-    const data = await res.json();
-    text.textContent=data;
-    
-}
+    try {
+        text.textContent="Clicked!";
+        const response = await fetch(quotesUrl, options);
+        const result = await response.text();
+        console.log(result);
+    } catch (error) {
+        console.error(error);
+    }}
 
 btn.addEventListener("click",getQuote);
